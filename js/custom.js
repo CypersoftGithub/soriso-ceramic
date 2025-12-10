@@ -1,12 +1,4 @@
-/*
 
-Template: Interium - Interior Design HTML5 Template
-Author: potenzaglobalsolutions
-Design and Developed by: potenzaglobalsolutions.com
-
-NOTE: This file contains all scripts for the actual Template.
-
-*/
 
 /*================================================
 [  Table of contents  ]
@@ -1123,3 +1115,50 @@ NOTE: This file contains all scripts for the actual Template.
           }
         });
       });
+
+        // Catalogue Filter Functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const filterButtons = document.querySelectorAll('.btn-filter');
+      const catalogueItems = document.querySelectorAll('.catalogue-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          this.classList.add('active');
+
+          const filterValue = this.getAttribute('data-filter');
+
+          catalogueItems.forEach(item => {
+            if (filterValue === 'all') {
+              item.classList.remove('hide');
+              item.style.display = '';
+            } else {
+              const itemCategory = item.getAttribute('data-category');
+              if (itemCategory === filterValue) {
+                item.classList.remove('hide');
+                item.style.display = '';
+              } else {
+                item.classList.add('hide');
+                item.style.display = 'none';
+              }
+            }
+          });
+
+          // Trigger animation for visible items
+          setTimeout(() => {
+            const visibleItems = document.querySelectorAll('.catalogue-item:not(.hide)');
+            visibleItems.forEach((item, index) => {
+              item.style.opacity = '0';
+              item.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+              }, index * 50);
+            });
+          }, 100);
+        });
+      });
+    });

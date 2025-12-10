@@ -3,12 +3,6 @@
   \*******************************************************************************************************************/
 /*
 
-Template: Interium - Interior Design HTML5 Template
-Version: 1.0
-Author: potenzaglobalsolutions
-Design and Developed by: potenzaglobalsolutions.com
-
-NOTE: This is main stylesheet of template, This file contains the styling for the actual Template.
 
 */
 /*================================================
@@ -9620,7 +9614,6 @@ body:has(.header.is-sticky) .site-content {
       .footer.footer-style-02 .min-footer .footer-right {
         padding-left: 130px; }
         .footer.footer-style-02 .min-footer .footer-right .widget.widget-menu ul {
-          display: grid;
           grid-template-columns: repeat(3, 1fr); }
         .footer.footer-style-02 .min-footer .footer-right .footer-right-top {
           padding-bottom: 50px; }
@@ -9965,4 +9958,40 @@ body:has(.header.is-sticky) .site-content {
           padding: 8px 15px;
           font-size: 14px;
         }
+      }
+
+
+      .filter-buttons {
+        margin-bottom: 30px;
+      }
+      .btn-filter {
+        margin: 5px;
+        padding: 10px 20px;
+        border: 2px solid #333;
+        background: transparent;
+        color: #333;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+      .btn-filter:hover,
+      .btn-filter.active {
+        background: #333;
+        color: #fff;
+        border-color: #333;
+      }
+      .catalogue-item {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+      .catalogue-item.hide {
+        display: none;
+      }
+      .catalogue-image {
+        width: 100% !important;
+        height: auto;
+        object-fit: cover;
+        max-height: 400px;
+      }
+      .portfolio-img {
+        overflow: hidden;
       }
