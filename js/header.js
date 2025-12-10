@@ -154,10 +154,10 @@
           <div class="social-icon">
             <ul>
               <li class="title">Follow us</li>
-              <li><a href="#">Fb.</a></li>
-              <li><a href="#">Dr.</a></li>
-              <li><a href="#">Tw.</a></li>
-              <li><a href="#">Be.</a></li>
+              <li><a href="https://www.facebook.com/profile.php?id=61584772018112">Fb.</a></li>
+              <li><a href="https://www.instagram.com/sorisoceramic/">In.</a></li>
+              <li><a href="mailto:mail@sorisoceramic.com">Em.</a></li>
+              <li><a href="tel:9375074466">Ph.</a></li>
             </ul>
           </div>
           <div class="contact-info-box">
