@@ -139,7 +139,7 @@
                       <h5 class="title ps-0" data-splitting="chars">Send Message</h5>
                       <p class="description">At Soriso Ceramic, we’re always here to help you bring your vision to life.</p>
                     </div>
-                    <form method="post" name="Contact_Us" class="contact-form form-transparent">
+                    <form method="POST" name="Contact_Us" class="contact-form form-transparent">
                       <div class="row">
                         <div class="col-md-12">
                           <input type="text" class="form-control" name="name" placeholder="Full Name" aria-label="First name">
@@ -148,16 +148,22 @@
                           <input type="email" class="form-control" name="email" placeholder="Email Address" aria-label="Email">
                         </div>
                         <div class="col-md-6">
-                          <input type="text" class="form-control" name="phone" placeholder="Phone" aria-label="Phone">
+                          <input type="text" class="form-control" name="Phone" placeholder="Phone" aria-label="Phone">
                         </div>
                         <div class="col-md-12">
                           <textarea class="form-control" name="message" placeholder="Your Comment" rows="4"></textarea>
                         </div>
                         <div class="col-md-12">
-                          <a href="#" class="btn">Send a message</a>
+                          <button type="submit" class="btn">Send a message</button>
                         </div>
                       </div>
                     </form>
+                    <div id="contact-success" class="alert alert-success mt-3 d-none" role="alert">
+                      Thanks for contacting us! We will reach out soon.
+                    </div>
+                    <div id="contact-error" class="alert alert-danger mt-3 d-none" role="alert">
+                      Something went wrong. Please try again in a moment.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -224,15 +230,26 @@
     <script src="js/lenis.min.js"></script>
     <script src="js/custom.js"></script>
     <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbxkgWotCMyvIKoT9aGtPCndZdHtHrq8i972t9CKAVjO6xC7T0I/exec'
-      const form = document.forms['Contact_Us']
-    
-      form.addEventListener('submit', e => {
-        e.preventDefault()
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbx9PzoI1pbZ0JJviFzYLQbp1pzHx_G0DHTPBvKc7Mw1FYg4SO5LRU1I-s1CaTU7Ib2R/exec';
+      const form = document.forms['Contact_Us'];
+      const successMsg = document.getElementById('contact-success');
+      const errorMsg = document.getElementById('contact-error');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        successMsg.classList.add('d-none');
+        errorMsg.classList.add('d-none');
+
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
-          .catch(error => console.error('Error!', error.message))
-      })
+          .then((response) => {
+            form.reset();
+            successMsg.classList.remove('d-none');
+          })
+          .catch((error) => {
+            console.error('Error!', error.message);
+            errorMsg.classList.remove('d-none');
+          });
+      });
     </script>
   </body>
 
