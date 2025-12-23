@@ -15034,3 +15034,39 @@ body:has(.header.is-sticky) .site-content {
   height: 600px;
   object-fit: cover;
 }
+
+@media (max-width: 668px) {
+  .legacy-tile-display {
+    height: 400px;
+  }
+  
+}
+
+@media (max-width: 400px) {
+  .legacy-tile-display {
+    height: 250px;
+  }
+  
+}
+
+.products-mega {
+  min-width: 420px;
+}
+
+.dropdown-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 5px;
+}
+
+.dropdown-item {
+  padding: 6px 0;
+}
+
+.dropdown-item:hover {
+  background: transparent;
+  color: #0d6efd;
+}

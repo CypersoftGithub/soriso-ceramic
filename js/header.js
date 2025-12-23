@@ -20,16 +20,48 @@
                 <a class="nav-link" href="about-us.html"><span>About Us</span></a>
               </li>
               <li class="dropdown nav-item">
-                <a class="nav-link" href="javascript:void(0)" data-bs-toggle="dropdown">Products<i class="bi bi-chevron-down"></i></a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="150x600.html"><span>150x600</span></a></li>
-                  <li><a class="dropdown-item" href="150x900.html"><span>150x900</span></a></li>
-                  <li><a class="dropdown-item" href="200x600.html"><span>200x600</span></a></li>
-                  <li><a class="dropdown-item" href="200x1000.html"><span>200x1000</span></a></li>
-                  <li><a class="dropdown-item" href="200x1200.html"><span>200x1200</span></a></li>
-                  <li><a class="dropdown-item" href="300x1200.html"><span>300x1200</span></a></li>
-                </ul>
-              </li>
+                <a class="nav-link" href="javascript:void(0)" data-bs-toggle="dropdown">
+                  Products <i class="bi bi-chevron-down"></i>
+                </a>
+
+                <div class="dropdown-menu p-3 products-mega">
+                  <div class="row g-0">
+                  
+                    <!-- SIZE COLUMN -->
+                    <div class="col-6 pe-3 border-end">
+                      <h6 class="dropdown-title">Size</h6>
+                      <ul class="list-unstyled">
+                        <li><a class="dropdown-item" href="Collection.html?size=150x600">150x600</a></li>
+                        <li><a class="dropdown-item" href="Collection.html?size=150x900">150x900</a></li>
+                        <li><a class="dropdown-item" href="Collection.html?size=200x600">200x600</a></li>
+                        <li><a class="dropdown-item" href="Collection.html?size=200x1000">200x1000</a></li>
+                        <li><a class="dropdown-item" href="Collection.html?size=200x1200">200x1200</a></li>
+                        <li><a class="dropdown-item" href="Collection.html?size=300x1200">300x1200</a></li>
+                        <li><a class="dropdown-item" href="Collection.html?size=150x600">150x600 Chevron</a></li>
+                      </ul>
+                    </div>
+
+                    <!-- SURFACE COLUMN -->
+                    <div class="col-6 ps-3">
+                      <h6 class="dropdown-title">Surface</h6>
+                      <ul class="list-unstyled">
+                        <li><a class="dropdown-item" href="Collection.html?surface=Regular Mattt">Regular Matt</a></li>
+                        <li><a class="dropdown-item" href="Collection.html?surface=Hard Matt">Hard Matt</a></li>
+                        <li><a class="dropdown-item" href="Collection.html?surface=r10">R10</a></li>
+                        <li><a class="dropdown-item" href="Collection.html?surface=Digital Matt">Digital Matt</a></li>
+                        <li><a class="dropdown-item" href="Collection.html?surface=Carving Mattt">Carving Matt</a></li>
+                        <li><a class="dropdown-item" href="Collection.html?surface=Sugar">Sugar</a></li>
+                        <li><a class="dropdown-item" href="Collection.html?surface=Metallic">Metallic</a></li>
+                        <li><a class="dropdown-item" href="Collection.html?surface=Grit Granula">Grit Granula</a></li>
+                        <li><a class="dropdown-item" href="Collection.html?surface=Digital Structured">Digital Structured</a></li>
+                        <li><a class="dropdown-item" href="Collection.html?surface=S.P. Color">S.P. Color</a></li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+            </li>
+
               <li class="dropdown nav-item">
                 <a class="nav-link" href="javascript:void(0)" data-bs-toggle="dropdown">Utilities<i class="bi bi-chevron-down"></i></a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -90,16 +122,8 @@
               <li class="nav-item">
                 <a class="nav-link" href="about-us.html"><span>About Us</span></a>
               </li>
-              <li class="dropdown nav-item">
-                <a class="nav-link" href="javascript:void(0)" data-bs-toggle="dropdown">Products<i class="bi bi-chevron-down"></i></a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="150x600.html"><span>150x600</span></a></li>
-                  <li><a class="dropdown-item" href="150x900.html"><span>150x900</span></a></li>
-                  <li><a class="dropdown-item" href="200x600.html"><span>200x600</span></a></li>
-                  <li><a class="dropdown-item" href="200x1000.html"><span>200x1000</span></a></li>
-                  <li><a class="dropdown-item" href="200x1200.html"><span>200x1200</span></a></li>
-                  <li><a class="dropdown-item" href="300x1200.html"><span>300x1200</span></a></li>
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="Collection.html"><span>Collection</span></a>
               </li>
               <li class="dropdown nav-item">
                 <a class="nav-link" href="javascript:void(0)" data-bs-toggle="dropdown">Utilities<i class="bi bi-chevron-down"></i></a>

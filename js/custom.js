@@ -1162,3 +1162,44 @@
         });
       });
     });
+
+
+
+
+     (function ($) {
+    $(document).ready(function () {
+
+      const params = new URLSearchParams(window.location.search);
+
+      const sizeParam = params.get('size');
+      const surfaceParam = params.get('surface');
+
+      // Apply SIZE from URL
+      if (sizeParam) {
+        $('.custom-multiselect-wrapper[data-filter-type="size"] input[type="checkbox"]').each(function () {
+          if ($(this).val() === sizeParam) {
+            $(this).prop('checked', true);
+          }
+        });
+        updateCustomMultiselectDisplay('size');
+      }
+
+      // Apply SURFACE from URL
+      if (surfaceParam) {
+        $('.custom-multiselect-wrapper[data-filter-type="surface"] input[type="checkbox"]').each(function () {
+          if ($(this).val() === surfaceParam) {
+            $(this).prop('checked', true);
+          }
+        });
+        updateCustomMultiselectDisplay('surface');
+      }
+
+      // Apply filters after URL load
+      updateFiltersFromCustom();
+
+    });
+  })(jQuery);
+
+
+
+  
